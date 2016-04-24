@@ -1,0 +1,23 @@
+alignment bottom_left
+gap_x 1922
+gap_y 0
+use_xft yes
+xftfont Terminus Bold:size=9
+update_interval 1
+total_run_times 0
+own_window yes
+own_window_type override
+own_window_transparent yes
+double_buffer yes
+border_inner_margin 10
+border_outer_margin 0
+minimum_size 1250
+maximum_width 1300
+short_units yes
+
+
+color2 white
+
+TEXT
+
+Network : Down Speed:${color2} ${downspeed eth0} - ${color2}Up Speed:${color2} ${upspeed eth0} 

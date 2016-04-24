@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#amixer get Master -M | grep -oE "[[:digit:]]*%"  ██
+#####amixer get Master -M | awk -F'[]%[]' '/%/ {if ($7 == "off") { print "Mute" } else { print $2"%" }}'
+# amixer get Master -M | awk -F'[]%[]' '/%/ {if ($7 == "off") { print "Mute" } else { if ($2<50) {print "lol"} else { if ($2==50) {print "!!!!" }else { if ($2>50) {print "lol2" }}}}}'
+
+# █████████
+# ██████████
+# █████████
+# 
+# ██████████
+# 20 20-41 60 84 100
+
+#amixer get Master -M | awk -F'[]%[]' '/%/ {if ($7 == "off") { print "Mute" } else { if ($2<20) {print "lol"} else { if ($2>20 && $2<42) {print "!!!!" }else { if ($2>42 && $2<60) {print "lol2" }}}}}'
+amixer get Master -M | awk -F'[]%[]' '/%/ {if ($7 == "off") { print "Mute" } else { if ($2<20) {print "██________ " $2"%"} else { if ($2>20 && $2<42) {print "████______ " $2"%" }else { if ($2>42 && $2<61) {print "██████____ "  $2"%" } else { if ($2>61 && $2<85) {print "████████__ " $2"%" } else { if ($2>86 && $2<101) {print "██████████ " $2"%" }}}}}}}'
