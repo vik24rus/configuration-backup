@@ -153,56 +153,48 @@ function . --description 'Evaluate contents of file (deprecated, see "source")' 
 end
 
 
-# fish git prompt
-#set __fish_git_prompt_showdirtystate 'yes'
-#set __fish_git_prompt_showstashstate 'yes'
-#set __fish_git_prompt_showupstream 'yes'
-#set __fish_git_prompt_color_branch yellow
+
+
+
+#fish git prompt
+set __fish_git_prompt_showdirtystate 'yes'
+set __fish_git_prompt_showstashstate 'yes'
+set __fish_git_prompt_showupstream 'yes'
+set __fish_git_prompt_color_branch yellow
 
 # Status Chars
-#set __fish_git_prompt_char_dirtystate '⚡'
-#set __fish_git_prompt_char_stagedstate '→'
-#set __fish_git_prompt_char_stashstate '↩'
-#set __fish_git_prompt_char_upstream_ahead '↑'
-#set __fish_git_prompt_char_upstream_behind '↓'
- 
-#function fish_prompt
-#        set last_status $status
-#        set_color $fish_color_cwd
-#        printf '%s' (prompt_pwd)
-#        set_color normal
-#        printf '%s ' (__fish_git_prompt)
-#       set_color normal
-#end
+set __fish_git_prompt_char_dirtystate '⚡'
+set __fish_git_prompt_char_stagedstate '→'
+set __fish_git_prompt_char_stashstate '↩'
+set __fish_git_prompt_char_upstream_ahead '↑'
+set __fish_git_prompt_char_upstream_behind '↓'
+  
+
+#If you want pwd on top + GIT 
 
 #function fish_prompt
-#      echo '┌─╼'
-#      echo (pwd) '>'
-##      set_color normal
+#       set_color red
+#       printf '┌─╼ ' 
+#       set_color white
+#       echo '[' (pwd) '] ' (__fish_git_prompt)  
+#       set_color red
+#       printf '└────╼ '
+#       set_color white
+#       printf ' ~ '
 #end
 
-#function fish_prompt 
-#	set_color red
-#	echo '┌─╼' '[' (pwd) ']' 
-#	printf  '└────╼ '
-#	set_color white 
-#	echo ' ~ '
-#end
+#If you want pwd bottom + GIT
 
 function fish_prompt
-       set_color red
-       printf '┌─╼ ' 
-       set_color white
-       echo '[' (pwd) ']'  
-       set_color red
-       printf '└────╼ '
-       set_color white
-       printf ' ~ '
+        set_color red
+        printf '┌─╼ ' 
+        set_color white
+        echo  ' ~ ' 
+        set_color red
+        printf '└────╼ '
+        set_color white
+	echo '[' (pwd) '] ' (__fish_git_prompt) ' '
 end
-
-
-
-
 
 
 alias !ping "ping 8.8.8.8"
@@ -211,6 +203,7 @@ function !ping
     ping 8.8.8.8 $argv
 end
 
+# ls++ 
 alias ls "ls++"
 
 function ls
