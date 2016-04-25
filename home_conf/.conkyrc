@@ -1,41 +1,19 @@
 use_xft yes
-
 out_to_console yes
 out_to_x no
 double_buffer yes
-#short_units yes
 update_interval 1.0
 cpu_avg_samples 8
 override_utf8_locale yes
 
 TEXT
-#[{ "full_text" : "Down Speed: ${downspeed eth0} " , "color":"\#ffffff" }  
- #{ "full_text":"Up Speed: ${upspeed eth0}" , "color":"\#ffffff" },
- #{ "full_text":"Total Down: ${totaldown eth0}" , "color":"\#ffffff" },
- #{ "full_text":"Total Up: ${totalup eth0}" , "color":"\#ffffff" },
- #{ "full_text":"GPU Temp: ${exec nvidia-smi -q -d TEMPERATURE | grep 'GPU Current Temp' | cut -c39-40}°C" , "color":"\#ffffff" },
- #{ "full_text":"CPU: $cpu%" , "color":"\#ffffff" },
- #{ "full_text":"RAM: $mem/$memmax" , "color":"\#ffffff" },
- #{ "full_text":"$time  ${time %a}" , "color":"\#ffffff" },
- #{ "full_text" : "${exec skb 1" , "color":"\#ffffff" } ],
 
 
 [
 
-#{ "full_text" : "Down Speed: ${downspeed eth0} " , "color" : "\#ffffff" },
-#{ "full_text" : "Up Speed: ${upspeed eth0}" , "color" : "\#FFD700" },
-#{ "full_text" : "Total Down: ${totaldown eth0} " , "color" : "\#ffffff" },
-#{ "full_text" : "Total Up: ${totalup eth0} " , "color" : "\#ffffff" },
-#{ "full_text" : "GPU Temp: ${exec nvidia-smi -q -d TEMPERATURE | grep 'GPU Current Temp' | cut -c39-40}°C " , "color" : "\#ffffff" },
-#{ "full_text" : "CPU: $cpu% " , "color" : "\#ffffff" },
-#{ "full_text" : "RAM: $mem/$memmax " , "color" : "\#ffffff" },
-#{ "full_text" : " ${time %a %d/%b %R}"},
-#{ "full_text" : " ${exec skb 1}"},
 { "full_text" : " Альбом: ${moc_album} || Исполнитель: ${moc_artist} || Трек: ${moc_song} " , "color" : "\#6599F6"},
 { "full_text" : " $moc_curtime " , "color" : "\#008000"},
 { "full_text" : " ♬ : ${exec ~/bin/volume}" , "color" : "red"},
-#{ "full_text" : "Down Speed: ${downspeed eth0} " , "color" : "\#ffffff" },
-#{ "full_text" : "Up Speed: ${upspeed eth0}" , "color" : "\ffffff" },
 { "full_text" : "Total Down: ${totaldown eth0} "  , "color" : "\#FF8C00" },
 { "full_text" : "Total Up: ${totalup eth0} " , "color" : "\#FF8C00" },
 { "full_text" : "GPU Temp: ${exec nvidia-smi -q -d TEMPERATURE | grep 'GPU Current Temp' | cut -c39-40}°C " , "color" : "\#00FFFF" },
