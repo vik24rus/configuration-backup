@@ -4,6 +4,6 @@ If for you something useful - TAKE IT!
 
 ![i3](https://github.com/vik24rus/configuration-backup/blob/master/home_conf/desktop.png)
 
-This is fish and [ls++](https://github.com/trapd00r/ls--)
+This is fish and [ls++](https://github.com/trapd00r/ls--) + git
 
 ![fish](https://github.com/vik24rus/configuration-backup/blob/master/home_conf/fish_ls%2B%2B.jpg)
